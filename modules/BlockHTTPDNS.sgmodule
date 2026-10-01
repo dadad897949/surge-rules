@@ -1,0 +1,51 @@
+#!name=拦截 HTTPDNS
+#!desc=阻止国产 App 自建 HTTPDNS 绕过 DNS 分流，强制回退系统 DNS（2026-09-30）
+#!author=Muse
+#!system=ios
+
+# 作用：微信、淘宝、京东、微博等 App 会自建 HTTPDNS，直接向固定 IP 查域名，
+# 绕过 Surge 的 DNS 设置。本模块拦截这些 HTTPDNS 请求，迫使 App 回退到系统 DNS。
+
+[Rule]
+# 腾讯系 HTTPDNS（微信 / QQ）
+DOMAIN,dns.weixin.qq.com,REJECT
+DOMAIN,dns.weixin.qq.com.cn,REJECT
+# 阿里系 HTTPDNS（淘宝 / 支付宝）
+DOMAIN,httpdns.alicdn.com,REJECT
+DOMAIN,httpdns-api.aliyuncs.com,REJECT
+DOMAIN,httpdns-sc.aliyuncs.com,REJECT
+# 百度系 HTTPDNS
+DOMAIN,httpdns.baidu.com,REJECT
+DOMAIN,httpdns.baidubce.com,REJECT
+DOMAIN,httpsdns.baidu.com,REJECT
+# 其他大厂 HTTPDNS
+DOMAIN,dns.jd.com,REJECT
+DOMAIN,dns.weibo.cn,REJECT
+DOMAIN,httpdns.bilivideo.com,REJECT
+DOMAIN,httpdns.music.163.com,REJECT
+DOMAIN,httpdns.n.netease.com,REJECT
+DOMAIN,httpdns.meituan.com,REJECT
+DOMAIN,httpdns.volcengineapi.com,REJECT
+DOMAIN-SUFFIX,httpdns.pro,REJECT
+# HTTPDNS 服务器 IP（no-resolve，不触发 DNS 查询）
+# 注意：119.29.29.29 同时是腾讯公共 DNS（DNSPod），很多配置拿它当 dns-server，
+# 拦截会导致正常 DNS 解析变慢，故不拦；域名规则已覆盖 HTTPDNS 场景
+IP-CIDR,119.29.29.98/32,REJECT,no-resolve
+IP-CIDR,119.29.29.99/32,REJECT,no-resolve
+IP-CIDR,203.107.1.0/24,REJECT,no-resolve
+IP-CIDR,180.76.76.200/32,REJECT,no-resolve
+IP-CIDR,182.254.116.117/32,REJECT,no-resolve
+IP-CIDR,182.254.118.119/32,REJECT,no-resolve
+
+[URL Rewrite]
+# 拦截 IP 直连形式的 HTTPDNS 请求（明文 HTTP，无需 MITM）
+"^https?:\/\/119\.29\.29\.29\/d" - reject
+"^https?:\/\/203\.107\.1\.\d+\/(resolve|ss)" - reject
+"^https?:\/\/180\.76\.76\.\d+\/v4\/resolve" - reject
+# 拦截域名形式的 HTTPDNS 请求（HTTPS，需配合下方 MITM 解密）
+"^https?:\/\/dns\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/newgetdns" - reject
+"^https?:\/\/.+\.zijieapi\.com\/get_domains\/" - reject
+
+[MITM]
+# %APPEND% 表示追加到现有 hostname 列表，不会覆盖你已有的配置
+hostname = %APPEND% dns.weixin.qq.com, *.zijieapi.com
