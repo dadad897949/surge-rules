@@ -1,0 +1,9 @@
+#!name=跳过中国移动代理检测
+#!desc=中国移动 App / 139 邮箱 / 咪咕跳过代理检测
+
+[General]
+skip-proxy = %APPEND%, 10086.cn, *.10086.cn, 139.com, *.139.com, migu.cn, *.migu.cn
+
+# 10086.cn：中国移动手机营业厅 App（client.app.coc.10086.cn / clientaccess.10086.cn / wx.10086.cn）
+# 139.com：139 邮箱（中国移动）
+# migu.cn：咪咕音乐 / 咪咕视频（中国移动）
