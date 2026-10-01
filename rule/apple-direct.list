@@ -1,0 +1,17 @@
+# Apple services that must bypass proxy (DIRECT)
+# Some AI rulesets miscategorize these under "Apple Intelligence" and send them
+# through proxy, which breaks native Apple services. Keep them on DIRECT.
+# Updated: 2026-10-01
+# App Store static CDN (fails to load via proxy)
+DOMAIN-SUFFIX,apps.mzstatic.com
+# iCloud Private Relay (pointless retries via proxy)
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-SUFFIX,apple-relay.akamaized.net
+DOMAIN-SUFFIX,gateway.icloud.com
+DOMAIN-SUFFIX,cp4.cloudflare.com
+# Legacy Siri backend (high voice latency via proxy)
+DOMAIN-SUFFIX,guzzoni.apple.com
+# Maps / Location / Spotlight (coordinate offset via proxy)
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
