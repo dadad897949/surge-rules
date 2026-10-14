@@ -1,5 +1,6 @@
 #!name=跳过中国移动代理检测
 #!desc=中国移动 App / 139 邮箱 / 咪咕跳过代理检测
+#!system=ios
 
 [General]
 skip-proxy = %APPEND%, 10086.cn, *.10086.cn, 139.com, *.139.com, migu.cn, *.migu.cn
