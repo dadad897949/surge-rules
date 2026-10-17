@@ -57,6 +57,9 @@ DOMAIN-SUFFIX, jetbrains.ai
 # Meta AI
 DOMAIN, imagine.meta.com
 DOMAIN-SUFFIX, meta.ai
+DOMAIN-SUFFIX, facebook.com
+DOMAIN-SUFFIX, meta.com
+DOMAIN-SUFFIX, metaaivm.com
 # Perplexity AI
 DOMAIN-SUFFIX, pplx.ai
 DOMAIN-SUFFIX, perplexity.ai
