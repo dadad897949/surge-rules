@@ -1,0 +1,10 @@
+#!name=大师兄影视去广告
+#!desc=去弹窗净化
+#!author=ddgksf2013
+#!system=ios
+
+[Body Rewrite]
+http-response-jq ^http:\/\/app\.dsx\.ac\/ndsx\.php\/v\/d\/logs 'del(.data.banners) | if .data.is_top then .data = [] else . end'
+
+[MITM]
+hostname = %APPEND% app.dsx.ac
