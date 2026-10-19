@@ -32,6 +32,7 @@ DOMAIN, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
 DOMAIN-SUFFIX, chatgpt.site
 DOMAIN-SUFFIX, host.livekit.cloud
 DOMAIN-SUFFIX, openai.com.cdn.cloudflare.net
+DOMAIN-SUFFIX, openai.org
 # GitHub Copilot
 DOMAIN, api.githubcopilot.com
 DOMAIN, copilot-proxy.githubusercontent.com
