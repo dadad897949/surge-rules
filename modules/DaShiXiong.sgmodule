@@ -4,7 +4,7 @@
 #!system=ios
 
 [Body Rewrite]
-http-response-jq ^http:\/\/app\.dsx\.ac\/ndsx\.php\/v\/d\/logs 'del(.data.banners) | if .data.is_top then .data = [] else . end'
+http-response-jq ^http:\/\/app\.dsx\.ac\/ndsx\.php\/v\d\/logs 'del(.data.banners) | if .data.is_top then .data = [] else . end'
 
 [MITM]
 hostname = %APPEND% app.dsx.ac
