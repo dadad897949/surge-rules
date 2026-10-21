@@ -1,5 +1,5 @@
 #!name=番茄小说去广告
-#!desc=番茄小说广告屏蔽（xhnmt/fqnovel + XiaoQi 增强，v2）
+#!desc=番茄小说广告屏蔽（xhnmt/fqnovel + XiaoQi 增强，v2.1，修复无效通配符）
 #!category=ddgksf2013
 #!author=@xhnmt
 #!system=ios
@@ -22,9 +22,9 @@ DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT
 DOMAIN,api.iegadp.qq.com,REJECT
 DOMAIN,sf3-ttcdn-tos.pstatp.com,REJECT
 DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
-DOMAIN,*default.ixigua.com,REJECT
+DOMAIN-SUFFIX,default.ixigua.com,REJECT
 DOMAIN,v6-novelapp.ixigua.com,REJECT
-DOMAIN,*novelapp.ixigua.com,REJECT
+DOMAIN-SUFFIX,novelapp.ixigua.com,REJECT
 DOMAIN-SUFFIX,byteorge.com,REJECT
 DOMAIN-SUFFIX,bytegoofy.com,REJECT
 DOMAIN-SUFFIX,bytedance.com,REJECT
