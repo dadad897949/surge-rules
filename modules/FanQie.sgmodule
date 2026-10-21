@@ -1,0 +1,115 @@
+#!name=番茄小说去广告
+#!desc=番茄小说广告屏蔽（基于 xhnmt/fqnovel 改 Surge 版）
+#!category=ddgksf2013
+#!author=@xhnmt
+#!system=ios
+
+[Rule]
+DOMAIN,p6-ad-sign.byteimg.com,REJECT
+DOMAIN,p9-ad-sign.byteimg.com,REJECT
+DOMAIN,i.snssdk.com,REJECT
+DOMAIN,i-lq.snssdk.com,REJECT
+DOMAIN,dig.bdurl.net,REJECT
+DOMAIN-KEYWORD,zijieapi,REJECT
+DOMAIN,activity-ag.awemeughun.com,REJECT
+DOMAIN,mcs.snssdk.com,REJECT
+DOMAIN,tnc3-alisc1.snssdk.com,REJECT
+DOMAIN,security-lq.snssdk.com,REJECT
+DOMAIN,tnc3-aliec2.snssdk.com,REJECT
+DOMAIN,is.snssdk.com,REJECT
+DOMAIN,msync-im1-vip6-std.easemob.com,REJECT
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT
+DOMAIN,api.iegadp.qq.com,REJECT
+DOMAIN,sf3-ttcdn-tos.pstatp.com,REJECT
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
+DOMAIN,*default.ixigua.com,REJECT
+DOMAIN,v6-novelapp.ixigua.com,REJECT
+DOMAIN,*novelapp.ixigua.com,REJECT
+DOMAIN-SUFFIX,byteorge.com,REJECT
+DOMAIN-SUFFIX,bytegoofy.com,REJECT
+DOMAIN-SUFFIX,bytedance.com,REJECT
+#DOMAIN-SUFFIX,ecombdimg.com,REJECT
+DOMAIN-SUFFIX,bytegecko.com,REJECT
+
+
+
+#测试
+
+
+DOMAIN-KEYWORD,normal-lq.fqnovel.com,REJECT
+DOMAIN,aweme.snssdk.com,REJECT
+DOMAIN,ec5-core-hl.ecombdapi.com,REJECT
+DOMAIN,ecom5-normal-hl.ecombdapi.com,REJECT
+DOMAIN,effect.snssdk.com,REJECT
+DOMAIN,frontier100-toutiao-hl.fqnovel.com,REJECT
+DOMAIN,is-lq.snssdk.com,REJECT
+DOMAIN,lf3-reading.fqnovelpic.com,REJECT
+DOMAIN,lf3-static.bytednsdoc.com,REJECT
+DOMAIN,log-hl.snssdk.com,REJECT
+DOMAIN,mon0-misc-hl.amemv.com,REJECT
+DOMAIN,p3-novel.byteimg.com,REJECT
+DOMAIN,p6-novel.byteimg.com,REJECT
+DOMAIN,render.ecombdpage.com,REJECT
+DOMAIN,sdk.open.extension.getui.com,REJECT
+DOMAIN,tnc3-bjlgy.snssdk.com,REJECT
+DOMAIN,v9-novelapp.fqnovelvod.com,REJECT
+DOMAIN,vas-lf-x.snssdk.com,REJECT
+DOMAIN,vas.snssdk.com,REJECT
+DOMAIN,vc-brain-v6.ndcpp.com,REJECT
+DOMAIN,vc-brain.ndcpp.com,REJECT
+DOMAIN,webcast5-core-lq.amemv.com,REJECT
+DOMAIN,webcast5-normal-hl.amemv.com,REJECT
+DOMAIN,webcast5-open-lq.douyin.com,REJECT
+DOMAIN,zlink.ugsdk.cn,REJECT
+
+
+
+#测试
+
+
+
+
+# 新增短剧广告规则（批量检查已修正）
+DOMAIN-SUFFIX,webcast-cdn-tos-ncdn.bytegecko.com,REJECT
+DOMAIN,lf-webcast-gr-sourcecdn.bytegecko.com,REJECT
+DOMAIN-SUFFIX,p*.douyinpic.com,REJECT
+DOMAIN-KEYWORD,lq.ecombdapi.com,REJECT
+DOMAIN-KEYWORD,reading-video.fqnovelvod.com,REJECT
+DOMAIN-SUFFIX,misc-lq.fqnovel.com,REJECT 
+DOMAIN-KEYWORD,misc-lq.fqnovel.com,REJECT
+DOMAIN-KEYWORD,mon*-misc-*.fqnovel.com,REJECT
+URL-REGEX,^https?:\/\/mon.*-misc-.*\.fqnovel\.com,REJECT
+URL-REGEX,^https?:\/\/mon*-misc-*\.fqnovel\.com,REJECT
+DOMAIN-KEYWORD,applog-lq.fqnovel.com,REJECT
+
+
+
+
+# IP拦截
+IP-CIDR,49.71.37.101/32,REJECT,no-resolve
+IP-CIDR,117.71.105.23/32,REJECT,no-resolve
+IP-CIDR,218.94.207.205/32,REJECT,no-resolve
+IP-CIDR,117.92.229.188/32,REJECT,no-resolve
+IP-CIDR,101.36.166.16/32,REJECT,no-resolve
+IP-CIDR,180.96.2.114/32,REJECT,no-resolve
+
+# 正则拦截
+URL-REGEX,*-default.ixigua.com,REJECT
+URL-REGEX,^http:\/\/.+\.byteimg\.com\/ad-app-package,REJECT
+URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image,REJECT
+
+[URL Rewrite]
+^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
+^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer - reject
+^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package - reject
+^https?:\/\/.+\.byteimg.com\/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg - reject
+^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad - reject
+^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+ - reject
+^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 - reject
+^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
+
+[MITM]
+hostname = %APPEND% *.pangolin-sdk-toutiao,*.pangolin-sdk-toutiao.*,*.pstatp.com,*.pstatp.com.*,*.pglstatp-toutiao.com.*,*.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com.*,*default.ixigua.com
