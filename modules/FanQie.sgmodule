@@ -1,5 +1,5 @@
 #!name=番茄小说去广告
-#!desc=番茄小说广告屏蔽（xhnmt/fqnovel + XiaoQi + zqzess 增强，v2.3）
+#!desc=番茄小说广告屏蔽（xhnmt/fqnovel + XiaoQi + zqzess 增强，v2.4）
 #!category=ddgksf2013
 #!author=@xhnmt
 #!system=ios
@@ -163,6 +163,20 @@ DOMAIN-SUFFIX,ic.snssdk.com,REJECT
 DOMAIN-SUFFIX,ug.snssdk.com,REJECT
 DOMAIN-SUFFIX,ctobsnssdk.com,REJECT
 DOMAIN-SUFFIX,toutiaopage.com,REJECT
+# 激进补充（2026-10-22）：Jack 要求番茄相关全加
+DOMAIN-SUFFIX,davinci.snssdk.com,REJECT
+DOMAIN-SUFFIX,gecko-hl.snssdk.com,REJECT
+DOMAIN-SUFFIX,gecko-lq.snssdk.com,REJECT
+DOMAIN-SUFFIX,nativeapp.toutiao.com,REJECT
+DOMAIN-SUFFIX,partner.toutiao.com,REJECT
+DOMAIN-SUFFIX,p3.pstatp.com,REJECT
+DOMAIN-SUFFIX,pb3.pstatp.com,REJECT
+DOMAIN-SUFFIX,sf6-ttcdn-tos.pstatp.com,REJECT
+DOMAIN-SUFFIX,temai.snssdk.com,REJECT
+DOMAIN-SUFFIX,toutiao-frontier.snssdk.com,REJECT
+DOMAIN-SUFFIX,dftoutiao.com,REJECT
+DOMAIN-SUFFIX,toutiao.2haha.com,REJECT
+DOMAIN-SUFFIX,toutiao.jxnews.com.cn,REJECT
 
 [URL Rewrite]
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
