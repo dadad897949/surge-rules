@@ -1,0 +1,2 @@
+# 自定义谷歌域名（dl.google.com 覆盖走代理，UnBan 里是直连，直连会 hang）
+DOMAIN,dl.google.com
