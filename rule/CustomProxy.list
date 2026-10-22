@@ -1,0 +1,16 @@
+# 自定义代理域名（手动添加，优先级最高）
+# 国内访问不畅的站点与服务
+DOMAIN-SUFFIX,linux.do
+DOMAIN-SUFFIX,wusrouter.com
+DOMAIN-SUFFIX,join.invgo.co
+DOMAIN-SUFFIX,nodeloc.com
+DOMAIN-SUFFIX,nodeseek.com
+DOMAIN-SUFFIX,huangguoai.com
+DOMAIN-SUFFIX,cubence.com
+# GitHub（规则更新、模块安装、API 访问走代理，直连不稳定）
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,githubassets.com
+# Google 广告服务（直连超时，走代理）
+DOMAIN-SUFFIX,app-ads-services.com
