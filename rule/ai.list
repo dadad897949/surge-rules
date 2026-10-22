@@ -148,6 +148,9 @@ DOMAIN-SUFFIX, lcicollections.org
 DOMAIN-SUFFIX, mcpservertest.online
 DOMAIN-SUFFIX, muthos.com
 DOMAIN-SUFFIX, sillylittleguy.org
+DOMAIN-SUFFIX, //github.com/aprilnea/reverse-engineering-claude-code-antspace
+DOMAIN-SUFFIX, ant.dev
+DOMAIN-SUFFIX, claudeacademy.com
 # JetBrains AI
 DOMAIN-SUFFIX, grazie.ai
 DOMAIN-SUFFIX, grazie.aws.intellij.net
