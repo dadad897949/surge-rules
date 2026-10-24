@@ -1,0 +1,30 @@
+# Cloudflare 官方服务域名（仅自家服务，不含套了 CF CDN 的第三方站点）
+# 主站 / 控制台 / API / 文档 / 社区
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,cloudflare.net
+DOMAIN-SUFFIX,cloudflare.tv
+DOMAIN-SUFFIX,cloudflarechina.com
+DOMAIN-SUFFIX,cloudflarestatus.com
+# Workers / Pages / R2
+DOMAIN-SUFFIX,workers.dev
+DOMAIN-SUFFIX,pages.dev
+DOMAIN-SUFFIX,r2.dev
+DOMAIN-SUFFIX,workers.cloudflare.com
+# DNS（1.1.1.1 / DoH）
+DOMAIN-SUFFIX,cloudflare-dns.com
+DOMAIN-SUFFIX,one.one.one.one
+DOMAIN-SUFFIX,cloudflarewarp.com
+# Access / Zero Trust
+DOMAIN-SUFFIX,cloudflareaccess.com
+DOMAIN-SUFFIX,cloudflare-gateway.com
+DOMAIN-SUFFIX,argotunnel.com
+DOMAIN-SUFFIX,trycloudflare.com
+# Stream / Images（视频与图片分发）
+DOMAIN-SUFFIX,cloudflarestream.com
+DOMAIN-SUFFIX,videodelivery.net
+DOMAIN-SUFFIX,cloudflareimages.com
+DOMAIN-SUFFIX,imagedelivery.net
+# Web Analytics / Zaraz
+DOMAIN-SUFFIX,cloudflareinsights.com
+DOMAIN-SUFFIX,cloudflarezaraz.com
+DOMAIN-SUFFIX,zaraz.com
