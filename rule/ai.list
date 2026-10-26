@@ -383,3 +383,18 @@ DOMAIN-SUFFIX, zed.dev
 # v0
 DOMAIN-SUFFIX, v0.app
 DOMAIN-SUFFIX, v0.dev
+
+# szkane/ClashRuleSet AiDomain.list 补漏（2026-10-27，仅 AI 相关，已过滤通用基建/埋点）
+DOMAIN-SUFFIX, cerebras.ai  # Cerebras AI 推理
+DOMAIN-SUFFIX, lmsudio.ai  # LM Studio 本地 AI
+DOMAIN-SUFFIX, ai.google  # Google AI
+DOMAIN-SUFFIX, github.gallery.vsassets.io  # Copilot 扩展资源
+DOMAIN-SUFFIX, github.gallerycdn.vsassets.io  # Copilot 扩展资源
+DOMAIN-SUFFIX, edgeservices.bing.com  # Copilot/Bing AI 后端
+DOMAIN-SUFFIX, people-pa.clients6.google.com  # Gemini People API
+DOMAIN-SUFFIX, waa-pa.clients6.google.com  # Gemini 相关
+DOMAIN-SUFFIX, designerapp.officeapps.live.com  # Microsoft Designer AI
+DOMAIN-SUFFIX, cdn.designerapp.osi.office.net  # Microsoft Designer AI
+DOMAIN-SUFFIX, auth0.com  # AI 应用登录（OpenAI/Claude 用）
+DOMAIN-SUFFIX, intercom.io  # AI 应用客服（Claude 用）
+DOMAIN-SUFFIX, intercomcdn.com  # AI 应用客服
