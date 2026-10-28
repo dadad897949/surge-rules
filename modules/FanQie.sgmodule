@@ -72,7 +72,6 @@ DOMAIN,zlink.ugsdk.cn,REJECT
 # 新增短剧广告规则（批量检查已修正）
 DOMAIN-SUFFIX,webcast-cdn-tos-ncdn.bytegecko.com,REJECT
 DOMAIN,lf-webcast-gr-sourcecdn.bytegecko.com,REJECT
-DOMAIN-WILDCARD,p*.douyinpic.com,REJECT
 DOMAIN-KEYWORD,lq.ecombdapi.com,REJECT
 DOMAIN-KEYWORD,reading-video.fqnovelvod.com,REJECT
 DOMAIN-SUFFIX,misc-lq.fqnovel.com,REJECT 
