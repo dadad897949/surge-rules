@@ -9,7 +9,7 @@ hostname = %APPEND% acs.m.goofish.com, g-acs.m.goofish.com
 [Rule]
 HOST-SUFFIX,iyes.youku.com,REJECT
 
-[Rewrite]
+[URL Rewrite]
 ^https?:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop.*splash\.ads - reject-200
 ^https?:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop.idle.ad.expose - reject-200
 
@@ -27,4 +27,4 @@ http-response-jq ^https?:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop.taobao.idlemtop
 http-response-jq ^https?:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop.taobao.idle.item.recommend '.data.cardList |= map(select(.cardData.bizType != "mamaAD"))'
 
 [Script]
-闲鱼AMDC = type=http-response,pattern=^http:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/amdc\/mobileDispatch,script-path=https://cdn.jsdelivr.net/gh/dadad897949/surge-rules@main/modules/scripts/amdc.js,requires-body=1
+闲鱼AMDC = type=http-response,pattern=^https?:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/amdc\/mobileDispatch,script-path=https://cdn.jsdelivr.net/gh/dadad897949/surge-rules@main/modules/scripts/amdc.js,requires-body=1
