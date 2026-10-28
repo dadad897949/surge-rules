@@ -1,9 +1,0 @@
-#!name=TG重定向
-#!desc=Telegram链接跳转至Swiftgram
-#!system=ios
-
-[URL Rewrite]
-^(https:\/\/)?t\.me\/(.+) sg://resolve?domain=$2 302
-
-[MITM]
-hostname = %APPEND% t.me
