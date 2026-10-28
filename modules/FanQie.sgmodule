@@ -72,12 +72,11 @@ DOMAIN,zlink.ugsdk.cn,REJECT
 # 新增短剧广告规则（批量检查已修正）
 DOMAIN-SUFFIX,webcast-cdn-tos-ncdn.bytegecko.com,REJECT
 DOMAIN,lf-webcast-gr-sourcecdn.bytegecko.com,REJECT
-DOMAIN-SUFFIX,p*.douyinpic.com,REJECT
+DOMAIN-WILDCARD,p*.douyinpic.com,REJECT
 DOMAIN-KEYWORD,lq.ecombdapi.com,REJECT
 DOMAIN-KEYWORD,reading-video.fqnovelvod.com,REJECT
 DOMAIN-SUFFIX,misc-lq.fqnovel.com,REJECT 
 DOMAIN-KEYWORD,misc-lq.fqnovel.com,REJECT
-DOMAIN-KEYWORD,mon*-misc-*.fqnovel.com,REJECT
 URL-REGEX,^https?:\/\/mon.*-misc-.*\.fqnovel\.com,REJECT
 URL-REGEX,^https?:\/\/mon*-misc-*\.fqnovel\.com,REJECT
 DOMAIN-KEYWORD,applog-lq.fqnovel.com,REJECT
@@ -94,9 +93,8 @@ IP-CIDR,101.36.166.16/32,REJECT,no-resolve
 IP-CIDR,180.96.2.114/32,REJECT,no-resolve
 
 # 正则拦截
-URL-REGEX,*-default.ixigua.com,REJECT
-URL-REGEX,^http:\/\/.+\.byteimg\.com\/ad-app-package,REJECT
-URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image,REJECT
+URL-REGEX,^https?:\/\/.+\.byteimg\.com\/ad-app-package,REJECT
+URL-REGEX,^https?:\/\/.+\.byteimg\.com\/web\.business\.image,REJECT
 
 DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
 DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
@@ -126,7 +124,6 @@ DOMAIN,pangolin16.sgsnssdk.com,REJECT
 URL-REGEX,pangolin[^\/]*(?![\w.-]),REJECT
 DOMAIN,frontier100-toutiao-lf.fqnovel.com,REJECT
 URL-REGEX,mon[^\/]*\-misc\-[^\/]*\.fqnovel\.com(?![\w.-]),REJECT
-DOMAIN-SUFFIX,pangolin-sdk-toutiao.*,REJECT
 URL-REGEX,[^\/]*ad\.qznovelvod\.com(?![\w.-]),REJECT
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
