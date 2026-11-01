@@ -193,11 +193,5 @@ DOMAIN-SUFFIX,toutiao.jxnews.com.cn,REJECT
 ^https?://api-access\.pangolin-sdk-toutiao1?\.com/api/ad/ - reject
 ^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ - reject
 ^https:\/\/api-access\.pangolin-sdk-toutiao\d?\.com\/api\/ad\/ - reject
-# 2026-11-01 补充（zqzess/honue 候选 4 条）：pstatp 宽广告路径、fqnovelvod 视频路径、拼多多 adim、ad-site-adstyle-public
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(ad-app-package|ad)\/.+ - reject
-^https?:\/\/v(\d)+-novelapp\.fqnovelvod\.com\/.+\/video\/.+ - reject
-^https?:\/\/adim\.pinduoduo\.com\/.+\/toutiao\?.+ - reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-site-adstyle-public\/.+ - reject
-
 [MITM]
-hostname = %APPEND% *.pangolin-sdk-toutiao.com, *.pstatp.com, *.pglstatp-toutiao.com, *.snssdk.com, *.byteimg.com, *.ixigua.com, api-access.pangolin-sdk-toutiao1.com, *.fqnovelvod.com, adim.pinduoduo.com
+hostname = %APPEND% *.pangolin-sdk-toutiao.com, *.pstatp.com, *.pglstatp-toutiao.com, *.snssdk.com, *.byteimg.com, *.ixigua.com, api-access.pangolin-sdk-toutiao1.com
