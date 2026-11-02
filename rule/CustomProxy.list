@@ -14,3 +14,8 @@ DOMAIN-SUFFIX,github.io
 DOMAIN-SUFFIX,githubassets.com
 # Google 广告服务（直连超时，走代理）
 DOMAIN-SUFFIX,app-ads-services.com
+# 无独立规则集的服务（2026-11-03：Ubisoft/Firebase/Box）
+DOMAIN-SUFFIX,ubisoft.com
+DOMAIN-SUFFIX,ubi.com
+DOMAIN-SUFFIX,firebaseio.com
+DOMAIN-SUFFIX,box.com
