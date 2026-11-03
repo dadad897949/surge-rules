@@ -173,6 +173,14 @@ DOMAIN-SUFFIX,toutiao-frontier.snssdk.com,REJECT
 DOMAIN-SUFFIX,dftoutiao.com,REJECT
 DOMAIN-SUFFIX,toutiao.2haha.com,REJECT
 DOMAIN-SUFFIX,toutiao.jxnews.com.cn,REJECT
+# 2026-11-03 新增（DragonRead/iKeLee 去广告插件）：
+DOMAIN,mon.toutiaocloud.net,REJECT
+DOMAIN,mon.toutiaocloud.com,REJECT
+DOMAIN,p3-developer.bytemaimg.com,REJECT
+DOMAIN,webcast-open.douyin.com,REJECT
+DOMAIN,p11-webcast-sign.douyinpic.com,REJECT
+DOMAIN,p3-webcast-sign.douyinpic.com,REJECT
+DOMAIN,security.snssdk.com,REJECT
 
 [URL Rewrite]
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
