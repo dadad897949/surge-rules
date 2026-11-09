@@ -49,6 +49,7 @@ DOMAIN-SUFFIX, algolia.net
 DOMAIN-SUFFIX, api.microsoftapp.net
 DOMAIN-SUFFIX, bing-shopping.microsoft-falcon.io
 DOMAIN-SUFFIX, client-api.arkoselabs.com
+DOMAIN, production-copilot-host-westus.webpubsub.azure.com
 # Google Gemini
 DOMAIN, ai.google.dev
 DOMAIN, aida.googleapis.com
@@ -189,6 +190,7 @@ DOMAIN-SUFFIX, x.ai
 DOMAIN-SUFFIX, grok.com
 DOMAIN-SUFFIX, grok.x.com
 DOMAIN-SUFFIX, grokipedia.com
+DOMAIN-SUFFIX, grokbot.com
 # Trae AI
 DOMAIN, trae-api-sg.mchost.guru
 DOMAIN-SUFFIX, trae.ai
