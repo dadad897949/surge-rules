@@ -1,7 +1,8 @@
-# Apple Push 代理修复（原模块转规则集）：国内 APNs 不稳定，推送走节点选择
+# Apple Push 修复（原模块转规则集）：APNs 走 DIRECT（苹果推送），不进代理
 DOMAIN-SUFFIX,push.apple.com
-DOMAIN-SUFFIX,akadns.net
-DOMAIN-KEYWORD,apple.com.edgekey.net
+DOMAIN-SUFFIX,courier-push-apple.com.akadns.net
+DOMAIN-SUFFIX,push-apple.com.akadns.net
+DOMAIN-SUFFIX,apple.com.edgekey.net
 IP-CIDR,17.249.0.0/16,no-resolve
 IP-CIDR,17.252.0.0/16,no-resolve
 IP-CIDR,17.57.144.0/22,no-resolve
