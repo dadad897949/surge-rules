@@ -15,7 +15,6 @@ DOMAIN-KEYWORD,aria2
 URL-REGEX,(Subject|HELO|SMTP)
 URL-REGEX,(api|ps|sv|offnavi|newvector|ulog.imap|newloc)(.map|).(baidu|n.shifen).com
 URL-REGEX,(.+.|^)(360|so|qihoo|360safe|qhimg|360totalsecurity|yunpan).(cn|com)
-URL-REGEX,(.+.)?(torrent|announce.php?passkey=|tracker|BitTorrent|bt_key|ed2k|find_node|get_peers|info_hash|magnet:|peer_id=|xunlei)(..+)?
 # XunLei
 URL-REGEX,(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)
 PROCESS-NAME,DownloadService.exe
@@ -27,3 +26,6 @@ PROCESS-NAME,Weiyun.exe
 PROCESS-NAME,baidunetdisk.exe
 # Xbox
 URL-REGEX,assets\d+\.xboxlive\.(com|cn)
+
+# 快版 BT 正则（2026-11-11）：原行头尾 (.+.)?/(..+)? 回溯爆炸 2934ms，改只留关键词
+URL-REGEX,(torrent|announce.php?passkey=|tracker|BitTorrent|bt_key|ed2k|find_node|get_peers|info_hash|magnet:|peer_id=|xunlei)
