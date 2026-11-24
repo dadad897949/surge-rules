@@ -119,6 +119,7 @@ DOMAIN-SUFFIX, stitch.withgoogle.com
 DOMAIN, appsgenaiserver-pa.clients.google.com
 DOMAIN, appsgenaiserver-pa.clients6.google.com
 DOMAIN, appsgenaiserver-pa.googleapis.com
+DOMAIN-SUFFIX, gemma.ai
 # Anthropic Claude
 DOMAIN-SUFFIX, anthropic.com
 DOMAIN-SUFFIX, claude.ai
